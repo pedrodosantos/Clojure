@@ -43,3 +43,13 @@
 
 (println "Aplica o filtro de Aplica-Desconto: " (filter aplica-desconto? precos))
 (println "Map apos o filtro de Aplica-Desconto: "(map valor-descontado (filter aplica-desconto? precos)))
+
+(println "Reduz o array somando todos os itens do array: " (reduce + precos))
+
+(defn minha-soma
+  [valor-1 valor-2]
+  ;(println  "somando" valor-1 valor-2)
+  (+ valor-1 valor-2))
+
+(println "Reduz o array somando todos os itens do array com minha funcao: " (reduce minha-soma precos))
+(println "Reduz o array somando todos os itens do array com minha funcao. Iniciando com 0: " (reduce minha-soma 0 precos))
